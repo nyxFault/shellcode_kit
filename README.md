@@ -19,6 +19,7 @@ sudo apt install gcc nasm ld binutils
 # For 32-bit support (x86)
 sudo apt install gcc-multilib
 ```
+## Usage
 
 ```bash
 # Compile assembly for 32-bit (64-bit by default)
