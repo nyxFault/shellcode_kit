@@ -23,14 +23,14 @@ sudo apt install gcc-multilib
 
 ```bash
 # Compile assembly for 32-bit (64-bit by default)
-./shellcode_kit.sh --compile hello.s -a x86
+./shellcode_kit.sh -a x86 --compile hello_x86.s
 
-# Extract shellcode from a binary
-./shellcode_kit.sh --extract /bin/ls
+# Extract shellcode from a binary and shellcode is saved in a .txt file
+./shellcode_kit.sh --extract hello_x86
 
 # Run with specific architecture (64-bit by default)
-./shellcode_kit.sh --run hello -a x86
+./shellcode_kit.sh -a x86 --run hello_x86
 
-# Debug and execute
-./shellcode_kit.sh --debug examples/hello
+# Debug generated code without execution
+./shellcode_kit.sh --debug hello_x86
 ```
